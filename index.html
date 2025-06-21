@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary - Write Your Thoughts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-book-open"></i>
+                    My Diary
+                </h1>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="newEntryBtn">
+                        <i class="fas fa-plus"></i>
+                        New Entry
+                    </button>
+                    <button class="btn btn-primary" id="saveBtn">
+                        <i class="fas fa-save"></i>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Your Entries</h3>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search entries...">
+                    </div>
+                </div>
+                <div class="entries-list" id="entriesList">
+                    <!-- Entries will be populated here -->
+                </div>
+            </aside>
+
+            <!-- Editor Area -->
+            <section class="editor-area">
+                <div class="editor-header">
+                    <div class="date-picker">
+                        <input type="date" id="entryDate" class="date-input">
+                    </div>
+                    <div class="mood-selector">
+                        <label for="moodSelect">Mood:</label>
+                        <select id="moodSelect" class="mood-input">
+                            <option value="">Select mood...</option>
+                            <option value="😊">😊 Happy</option>
+                            <option value="😔">😔 Sad</option>
+                            <option value="😡">😡 Angry</option>
+                            <option value="😌">😌 Calm</option>
+                            <option value="🤔">🤔 Thoughtful</option>
+                            <option value="😴">😴 Tired</option>
+                            <option value="😃">😃 Excited</option>
+                            <option value="😢">😢 Emotional</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="editor-content">
+                    <input type="text" id="entryTitle" class="title-input" placeholder="Entry title...">
+                    <textarea id="entryContent" class="content-textarea" placeholder="Write your thoughts here..."></textarea>
+                </div>
+
+                <div class="editor-footer">
+                    <div class="word-count">
+                        <span id="wordCount">0 words</span>
+                    </div>
+                    <div class="editor-actions">
+                        <button class="btn btn-outline" id="clearBtn">
+                            <i class="fas fa-eraser"></i>
+                            Clear
+                        </button>
+                        <button class="btn btn-primary" id="saveEntryBtn">
+                            <i class="fas fa-save"></i>
+                            Save Entry
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Welcome Modal -->
+    <div class="modal" id="welcomeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome to Your Personal Diary</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Start your journey of self-reflection and personal growth. Write about your day, your thoughts, your dreams, and everything in between.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-pen"></i>
+                        <span>Write freely</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-search"></i>
+                        <span>Search entries</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <span>Track your mood</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="startWritingBtn">Start Writing</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Load authentication script first -->
+    <script src="auth.js"></script>
+    <!-- Then load diary script -->
+    <script src="script.js"></script>
+</body>
+</html> 
