@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2aaa1daa-bca4-47b8-85ce-2ccfce739743)# My Diary - Personal Diary Writing Website 
+# My Diary - Personal Diary Writing Website 
 A beautiful, modern, and feature-rich diary writing application with user authentication built with HTML, CSS, and JavaScript. Write your thoughts, track your mood, and organize your personal reflections in a clean and intuitive interface.
 
 ## ✨ Features
